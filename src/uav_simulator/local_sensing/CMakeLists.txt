@@ -5,8 +5,9 @@ SET(CMAKE_BUILD_TYPE Release) # Release, RelWithDebInfo
 ADD_COMPILE_OPTIONS(-std=c++11 )
 ADD_COMPILE_OPTIONS(-std=c++14 )
 
-#set(ENABLE_CUDA false)
 set(ENABLE_CUDA false)
+# set(ENABLE_CUDA true)
+set(Boost_USE_STATIC_LIBS ON)
 
 if(ENABLE_CUDA)
   find_package(CUDA REQUIRED)
